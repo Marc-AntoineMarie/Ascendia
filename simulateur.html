@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windsurf Clarity – Simulateur de progression</title>
+  <meta name="description" content="Simulez votre progression en windsurf selon votre niveau, votre fréquence et vos objectifs. Obtenez un plan clair par étapes." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="canonical" href="/simulateur.html" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="/">Windsurf<span>Clarity</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+      <a href="/offres.html">Nos offres</a>
+      <a class="active" href="/simulateur.html">Simulateur</a>
+      <a href="/blog/">Blog</a>
+      <a href="/a-propos.html">À propos</a>
+      <a class="btn btn-primary" href="/contact.html">Contact / Réserver</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Simulateur de progression</h1>
+      <p>Estimez le temps nécessaire pour atteindre vos objectifs selon votre niveau actuel et votre fréquence d'entraînement.</p>
+      <p class="muted small">Avertissement: ce simulateur fournit une estimation indicative à titre informatif, sans garantie de résultat. Les conditions réelles (météo, disponibilité, santé, etc.) influencent la progression.</p>
+    </section>
+
+    <section class="card">
+      <form id="sim-form" class="sim-form" novalidate>
+        <div class="form-row">
+          <label for="niveau">Votre niveau</label>
+          <select id="niveau" required>
+            <option value="debutant">Débutant</option>
+            <option value="intermediaire">Intermédiaire</option>
+            <option value="avance">Avancé</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="frequence">Séances / semaine</label>
+          <input id="frequence" type="range" min="1" max="5" step="1" value="2" />
+          <output id="freqOut">2</output>
+        </div>
+        <div class="form-row">
+          <label for="objectif">Objectif principal</label>
+          <select id="objectif">
+            <option value="waterstart">Waterstart</option>
+            <option value="jibe">Jibe</option>
+            <option value="planning">Départ au planning</option>
+            <option value="foil">Premiers vols en foil</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Calculer mon plan</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="card result hidden" aria-live="polite">
+      <h2>Votre plan personnalisé</h2>
+      <p id="summary" class="muted"></p>
+      <div id="timeline" class="timeline"></div>
+      <div class="recommendations">
+        <h3>Recommandations matériel & cours</h3>
+        <ul id="reco-list"></ul>
+        <a class="btn btn-secondary" href="/offres.html">Choisir une offre adaptée</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/">Windsurf<span>Clarity</span></a>
+        <p>Une approche claire, rassurante et efficace du windsurf.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/offres.html">Offres</a>
+        <a href="/simulateur.html">Simulateur</a>
+        <a href="/blog/">Blog</a>
+        <a href="/a-propos.html">À propos</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="footer-legal">
+        <p>© <span id="year"></span> Windsurf Clarity</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/main.js" defer></script>
+  <script src="/assets/simulateur.js" defer></script>
+</body>
+</html>

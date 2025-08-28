@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ascendia – Contact & 3 RDV gratuits</title>
+  <meta name="description" content="Contactez Ascendia: jusqu’à 3 rendez-vous gratuits pour cadrer votre situation patrimoniale. Partagez vos objectifs et préférences (risque, éthique)." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="canonical" href="/contact.html" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <section>
+      <h1>Contact & prise de RDV</h1>
+      <p>Expliquez-nous votre situation et vos objectifs. Nous proposons jusqu’à <strong>3 rendez-vous gratuits</strong> pour cadrer avant toute mise en place (frais de 4% ensuite si vous décidez d’avancer).</p>
+    </section>
+
+    <section class="grid contact-grid">
+      <form id="intake-form" class="card" autocomplete="on">
+        <div class="form-row">
+          <label for="nom">Nom et prénom</label>
+          <input id="nom" name="nom" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="tel" type="tel" placeholder="06 ..." />
+        </div>
+        <div class="form-row">
+          <label for="age">Âge (facultatif)</label>
+          <input id="age" name="age" type="number" min="16" max="100" />
+        </div>
+        <div class="form-row">
+          <label for="patrimoine">Avez-vous déjà du patrimoine ?</label>
+          <select id="patrimoine" name="patrimoine">
+            <option value="non">Non</option>
+            <option value="oui">Oui (épargne, AV, PEA, immo...)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="objectifs">Vos objectifs (libre)</label>
+          <textarea id="objectifs" name="objectifs" rows="3" placeholder="Épargne de précaution, logement, études, projets..."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="budget">Budget épargne mensuelle (estimation)</label>
+          <input id="budget" name="budget" type="number" min="0" step="10" placeholder="Ex: 200" />
+        </div>
+        <div class="form-row">
+          <label for="horizon">Horizon principal</label>
+          <select id="horizon" name="horizon">
+            <option value="court">Court terme (0-2 ans)</option>
+            <option value="moyen">Moyen terme (3-7 ans)</option>
+            <option value="long">Long terme (8+ ans)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="risque">Tolérance au risque</label>
+          <select id="risque" name="risque">
+            <option value="faible">Faible (priorité stabilité)</option>
+            <option value="moderee">Modérée</option>
+            <option value="elevee">Élevée</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Préférences éthiques</label>
+          <div>
+            <label><input type="checkbox" name="ethique" value="durable"> Durable / ESG</label>
+            <label><input type="checkbox" name="ethique" value="solidaire"> Solidaire</label>
+            <label><input type="checkbox" name="ethique" value="neutre"> Sans préférence</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="dispos">Disponibilités pour RDV (créneaux)</label>
+          <textarea id="dispos" name="dispos" rows="2" placeholder="Ex: soirs en semaine, mercredi après-midi..."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="canal">Canal préféré</label>
+          <select id="canal" name="canal">
+            <option>Visio</option>
+            <option>Téléphone</option>
+            <option>Présentiel</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message complémentaire</label>
+          <textarea id="message" name="message" rows="4" placeholder="Toute information utile (contraintes, documents, questions)..."></textarea>
+        </div>
+        <div class="form-row">
+          <label><input id="consent" type="checkbox" required> J’accepte d’être recontacté et le traitement de mes informations selon la finalité décrite.</label>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+        </div>
+        <p class="muted small">Aucune promesse de rendement. Vos informations servent uniquement à préparer nos 3 RDV gratuits.</p>
+      </form>
+
+      <div class="card">
+        <h2>Infos pratiques</h2>
+        <ul>
+          <li>Email: contact@ascendia.example</li>
+          <li>Téléphone: 06 00 00 00 00</li>
+          <li>Horaires: Lundi–Samedi, 9h–19h</li>
+        </ul>
+        <div class="map-embed">
+          <iframe title="Carte - Windsurf Clarity" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-4.5%2C48.3%2C-4.45%2C48.4&amp;layer=mapnik" style="border:0;width:100%;height:260px"></iframe>
+        </div>
+        <div class="booking">
+          <a class="btn btn-secondary" href="#intake-form">Prendre un RDV</a>
+          <a class="btn btn-ghost" href="mailto:contact@ascendia.example">Nous écrire</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>
