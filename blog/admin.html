@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Blog – Import DOCX</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+  <main class="container">
+    <section class="card">
+      <h1>Administration du blog (import .docx)</h1>
+      <p class="muted">Outil local, sans serveur. Conversion côté navigateur via Mammoth.js.</p>
+
+      <div class="form-row">
+        <label for="access-key">Clé d’accès</label>
+        <input id="access-key" type="password" placeholder="Saisir la clé pour déverrouiller" />
+      </div>
+
+      <div id="admin-panel" style="display:none">
+        <div class="grid" style="grid-template-columns:1fr 1fr; gap:16px">
+          <div>
+            <div class="form-row">
+              <label for="docx-file">Fichier Word (.docx)</label>
+              <input id="docx-file" type="file" accept=".docx" />
+            </div>
+            <div class="form-row">
+              <label for="title">Titre</label>
+              <input id="title" type="text" placeholder="Titre de l’article" />
+            </div>
+            <div class="form-row">
+              <label for="description">Description</label>
+              <input id="description" type="text" placeholder="Description courte (SEO)" />
+            </div>
+            <div class="form-row">
+              <label for="slug">Slug (nom du fichier)</label>
+              <input id="slug" type="text" placeholder="ex: mon-article" />
+            </div>
+            <div class="form-actions">
+              <button id="download-html" class="btn btn-primary" disabled>Télécharger l’HTML</button>
+            </div>
+          </div>
+          <div>
+            <label>Aperçu</label>
+            <div id="preview" class="card prose" style="min-height:200px; background:#0b1220; border:1px solid #233044"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:16px">
+        <p>Conseils:
+          <br>- Les images intégrées dans le .docx ne sont pas extraites automatiquement dans ce flux statique.
+          <br>- Après téléchargement, placez le fichier dans <code>/blog/</code> et ajoutez un lien sur <code>/blog/index.html</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+  <script src="/assets/main.js" defer></script>
+  <script src="/assets/admin.js" defer></script>
+</body>
+</html>

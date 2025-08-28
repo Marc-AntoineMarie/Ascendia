@@ -11,22 +11,12 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <header class="site-header container">
-    <a class="logo" href="/">Windsurf<span>Clarity</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-      <a href="/offres.html">Nos offres</a>
-      <a href="/simulateur.html">Simulateur</a>
-      <a class="active" href="/blog/">Blog</a>
-      <a href="/a-propos.html">À propos</a>
-      <a class="btn btn-primary" href="/contact.html">Contact / Réserver</a>
-    </nav>
-  </header>
+  <div data-include="/partials/header.html"></div>
 
   <main class="container prose">
     <article>
       <h1>Waterstart: 7 conseils pour réussir</h1>
-      <p class="muted small">Par l'équipe Windsurf Clarity</p>
+      <p class="muted small">Par Ascendia</p>
       <ol>
         <li>Préparez l'aile: bord d'attaque au vent, écoute hors de l'eau.</li>
         <li>Positionnez la planche: légèrement lofée, pieds prêts à pousser.</li>
@@ -39,24 +29,7 @@
     </article>
   </main>
 
-  <footer class="site-footer container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="/">Windsurf<span>Clarity</span></a>
-        <p>Une approche claire, rassurante et efficace du windsurf.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="/offres.html">Offres</a>
-        <a href="/simulateur.html">Simulateur</a>
-        <a href="/blog/">Blog</a>
-        <a href="/a-propos.html">À propos</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-      <div class="footer-legal">
-        <p>© <span id="year"></span> Windsurf Clarity</p>
-      </div>
-    </div>
-  </footer>
+  <div data-include="/partials/footer.html"></div>
   <script src="/assets/main.js" defer></script>
 </body>
 </html>
